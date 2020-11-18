@@ -6,6 +6,7 @@ describe('Park', function() {
   let park
   let dino1
   let dino2
+  let dino3
   let dinosaurs
   beforeEach(function () {
     dino1 = new Dinosaur('Velociraptor', 'carnivore', 50)
@@ -25,7 +26,7 @@ describe('Park', function() {
 
   it('should have a collection of dinosaurs', function(){
     park.dinosaurs = dinosaurs
-    assert.strictEqual(park.dinosaurs.length, 3 )
+    assert.deepStrictEqual(park.dinosaurs, [dino1, dino2, dino3] )
   });
 
   it('should be able to add a dinosaur to its collection', function(){
